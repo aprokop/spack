@@ -103,6 +103,10 @@ class Openmpi(AutotoolsPackage):
     provides('mpi@:3.0', when='@1.7.5:')
     provides('mpi@:3.1', when='@2.0.0:')
 
+    provides('mpi@:2.2', when='@1.8.8')
+    provides('mpi@:3.0', when='@1.8.8')
+    provides('mpi@:3.1', when='@1.8.8')
+
     depends_on('hwloc')
     depends_on('jdk', when='+java')
     depends_on('sqlite', when='+sqlite3')
