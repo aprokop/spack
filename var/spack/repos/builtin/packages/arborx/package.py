@@ -46,6 +46,7 @@ class Arborx(CMakePackage, CudaPackage, ROCmPackage):
     depends_on("cmake@3.16:", type="build", when="@1.0:")
     depends_on("mpi", when="+mpi")
     depends_on("rocthrust", when="+rocm")
+    depends_on("intel-oneapi-dpl", when="+sycl")
 
     # Standalone Kokkos
     depends_on("kokkos@3.1.00:", when="~trilinos")
